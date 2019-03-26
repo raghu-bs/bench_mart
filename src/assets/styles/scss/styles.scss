@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../../../m-modified.css";
+@import "../scss/variables.scss";
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0 0 3px #dfdfdf inset;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}
+
+::-moz-scrollbar {
+  width: 8px;
+}
+
+::-moz-scrollbar-button {
+  width: 8px;
+  height: 5px;
+}
+
+::-moz-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0 0 3px #dfdfdf inset;
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-thumb {
+  background: #999;
+  border: thin solid gray;
+  border-radius: 10px;
+}
+
+::-moz-scrollbar-thumb:hover {
+  background: #7d7d7d;
+}
+
+.active-link {
+  background: $primary-theme-color !important;
+  color: $white !important;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.mat-list-option.mat-list-item-focus,
+.mat-list-option:hover,
+.mat-nav-list .mat-list-item.mat-list-item-focus,
+.mat-nav-list .mat-list-item:hover {
+  background: $primary-theme-color !important;
+  color: $white !important;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.widget-header {
+  color: $primary-gray-heading;
+}
+
+.primary-btn {
+  background-color: $primary-btn-color !important;
+  color: $primary-bg-color !important;
+}
+
+.table-header {
+  color: $primary-heading-color;
+}
+
+.primary-icon {
+  color: $primary-theme-color;
+}
+
+p {
+  font-size: 15px;
+  color: $primary-gray-heading;
+}

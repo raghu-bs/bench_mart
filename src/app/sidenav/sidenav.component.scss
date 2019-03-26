@@ -1,0 +1,58 @@
+@import "../../assets/styles/scss/variables.scss";
+
+.sidenav-container {
+  height: 100%;
+}
+.example-form-field {
+  width: 200px;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+.mat-nav-list .mat-list-item{
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+.sidenavelement{
+  padding-left: 20px
+}
+::ng-deep .highlightmenu{
+  background: linear-gradient(60deg,#ab47bc,#512f6f);
+    
+}
+
+
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox. 
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-drawer-container {
+    overflow: visible;
+}
+
+.logo-img{
+  height: 70px;
+  width: 85px;
+}
+
+.sign-out{
+  color: $primary-btn-color;
+}

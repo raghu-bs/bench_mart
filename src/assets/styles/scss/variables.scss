@@ -1,0 +1,346 @@
+/*------------------------
+        VARIABLES
+ -------------------------*/
+// Custom theme 
+
+$primary-theme-color: #00A14F;
+$primary-heading-color: #00A14F;
+$primary-bg-color: #F6F9FA;
+$primary-font-cololr: #fff;
+$primary-gray-heading: #687377;
+$primary-btn-color: #00A14F;
+
+$px1: .0625em;
+$px2: .125em;
+$px4: .25em;
+$px6: .375em;
+$px8: .5em;
+$px10: .625em;
+$px12: .75em;
+$px14: .875em;
+$px16: 1em;
+$px18: 1.125em;
+$px20: 1.25em;
+$px24: 1.5em;
+$px30: 1.875em;
+
+// Headings
+
+$h1: 20px;
+$h2: 18px;
+$h3: 16px;
+$h4: 13px;
+
+// Paddings
+
+$pad-10: 10px;
+$pad-20: 20px;
+$pad-30: 30px;
+$pad-40: 40px;
+$pad-50: 50px;
+$pad-60: 60px;
+$pad-70: 70px;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+$line-height-lg: 1.7;
+
+$border-width: $px1;
+
+//Fonts
+$main-font: Helvetica;
+
+// Gray Colors
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dddddd; // rgb(221, 221, 221);
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #9e9e9e;
+$gray-700: #979ca2;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+//Colors
+$account: rgb(122, 193, 63);
+$claim: rgb(254, 177, 9);
+$client: rgb(0, 178, 139);
+
+$orange-bg: #f99700;
+$orange-hover: #E38F16;
+
+$heading-color: rgb(59, 108, 170);
+$gray: #c4c0ba;
+$lightgray: #e7e7e7;
+$primary: #007bff;
+$info: #17a2b8;
+$secondary: #6c757d;
+$success: rgb(0,128,0);
+$danger: #dc3545;
+$warning: #ffc107;
+$link: #0056b3;
+$white: #fff;
+$black: #000;
+$app-border-color: #ced4da;
+$app-dropdown-bg: #7f7f7f;
+$tooltip-bg: rgb(112, 112, 112);
+$app-popup-errorbox-bg: rgb(243, 243, 243);
+$app-quickserch-bg: rgb(242, 242, 242);
+$error-box: rgb(242, 240, 236);
+$grid-alt-row: rgb(236, 249, 255);
+$grid-row-active: $gray-300;
+$grid-row-hover: $gray-300;
+$loader-gray: rgba(161, 161, 161, 0.5);
+$section-black: rgba(0, 0, 0, 0.42);
+
+$disable-gray: rgba($black, 0.60);
+$shadow: rgba($black, 0.1);
+$close-btn-bg: rgb(127, 127, 127);
+
+// Heading Fonts
+$font-size-lg: $px16;
+$font-size-base: $px14;
+$font-size-sm: $px12;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$heading-mb: $px16;
+$heading-mt: $px16;
+$heading-font-family: inherit;
+$heading-font-weight: 500;
+$heading-line-height: 1.2;
+
+$fontsize-lable-span: 13px;
+$fontsize-textfield: 14px;
+
+//  width
+$cust-width-5: 5%;
+$cust-width-10: 10%;
+$cust-width-15: 15%;
+$cust-width-20: 20%;
+$cust-width-25: 25%;
+$cust-width-30: 30%;
+$cust-width-35: 35%;
+$cust-width-40: 40%;
+$cust-width-45: 45%;
+$cust-width-50: 50%;
+$cust-width-55: 55%;
+$cust-width-60: 60%;
+$cust-width-65: 65%;
+$cust-width-70: 70%;
+$cust-width-75: 75%;
+$cust-width-80: 80%;
+$cust-width-85: 85%;
+$cust-width-90: 90%;
+$cust-width-95: 95%;
+$cust-width-100: 100%;
+
+// height
+
+$cust-height-10: 10%;
+$cust-height-20: 20%;
+$cust-height-30: 30%;
+$cust-height-40: 40%;
+$cust-height-45: 45%;
+$cust-height-50: 50%;
+$cust-height-60: 60%;
+$cust-height-70: 70%;
+$cust-height-80: 80%;
+$cust-height-90: 90%;
+$cust-height-100: 100%;
+
+// Paragraphs
+$p-mb: $px10;
+$p-mt: $px10;
+
+// Buttons
+$btn-padding-y: $px6;
+$btn-padding-x: $px12;
+$btn-line-height: 1.5;
+$btn-font-size: $px12;
+
+$btn-padding-y-sm: $px4;
+$btn-padding-x-sm: $px8;
+$btn-line-height-sm: $btn-line-height;
+$btn-font-size-sm: $px10;
+
+$btn-padding-y-lg: $px8;
+$btn-padding-x-lg: $px16;
+$btn-line-height-lg: $btn-line-height;
+$btn-font-size-lg: $px14;
+
+$btn-font-weight: 400;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 $px1 $px1 rgba($black, 0.075);
+$btn-focus-width: .2em;
+$btn-focus-box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.25);
+
+$btn-border-radius: $px4;
+$btn-border-width: $px1;
+$btn-border-color: transparent;
+
+$transition-base: all .2s ease-in-out;
+$transition-fade: opacity .15s linear;
+$transition-collapse: height .35s ease;
+
+$btn-disabled-opacity: .65;
+
+// Mixins
+@mixin button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius) {
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  line-height: $btn-line-height;
+  border-radius: $btn-border-radius;
+}
+
+// Forms
+$input-padding-y: $px6;
+$input-padding-x: $px12;
+$input-line-height: $line-height-base;
+
+$input-padding-y-sm: $px4;
+$input-padding-x-sm: $px8;
+$input-line-height-sm: $line-height-sm;
+
+$input-padding-y-lg: $px8;
+$input-padding-x-lg: $px16;
+$input-line-height-lg: $line-height-lg;
+
+$input-bg: $white;
+$input-disabled-bg: $secondary;
+
+$input-color: $black;
+$input-border-color: $black;
+$input-border-width: $px1;
+
+$input-border-radius: $px4;
+$input-border-radius-lg: $px6;
+$input-border-radius-sm: $px2;
+
+$input-focus-bg: $input-bg;
+$input-focus-border-color: lighten($primary, 25%);
+$input-focus-color: $input-color;
+
+// Tooltips
+
+$tooltip-font-size: $font-size-sm;
+$tooltip-max-width: 200px;
+$tooltip-color: $white;
+$tooltip-bg: $black;
+$tooltip-border-radius: $px2;
+$tooltip-opacity: .9;
+$tooltip-padding-y: $px4;
+$tooltip-padding-x: $px8;
+$tooltip-margin: 0;
+
+$tooltip-arrow-width: $px12;
+$tooltip-arrow-height: $px6;
+$tooltip-arrow-color: $tooltip-bg;
+
+//Alerts
+
+$alert-padding-y: $px12;
+$alert-padding-x: $px20;
+$alert-margin-bottom: $px16;
+$alert-border-radius: $px4;
+$alert-link-font-weight: $font-weight-bold;
+$alert-border-width: $border-width;
+
+// Close
+
+$close-font-size: $font-size-base * 1.2;
+$close-font-weight: $font-weight-bold;
+$close-color: $secondary;
+
+// Dropdowns
+
+$dropdown-padding-y: $px8;
+$dropdown-spacer: $px2;
+$dropdown-bg: $lightgray;
+$dropdown-border-color: $lightgray;
+$dropdown-border-radius: none;
+$dropdown-border-width: $border-width;
+
+$dropdown-link-color: $gray-800;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary-theme-color;
+
+$dropdown-link-active-color: $white;
+$dropdown-link-active-bg: $primary-theme-color;
+
+$dropdown-link-disabled-color: $secondary;
+
+$dropdown-item-padding-y: $px4;
+$dropdown-item-padding-x: $px24;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$select-padding-y: $px6;
+$select-padding-x: $px12;
+$select-height: $px30;
+$select-line-height: 1.5;
+$select-color: $black;
+$select-disabled-color: $secondary;
+$select-bg: $white;
+$select-disabled-bg: $lightgray;
+$select-bg-size: $px8 $px10;
+$select-border-width: none;
+$select-border-color: $input-border-color;
+$select-border-radius: none;
+
+$select-focus-border-color: $input-focus-border-color;
+$select-focus-box-shadow: inset 0 1px 2px rgba($black, 0.075), 0 0 5px rgba($select-focus-border-color, 0.5);
+
+// Pagination
+$pagination-padding-y: $px8;
+$pagination-padding-x: $px12;
+$pagination-padding-y-sm: $px4;
+$pagination-padding-x-sm: $px8;
+$pagination-padding-y-lg: $px12;
+$pagination-padding-x-lg: $px24;
+$pagination-line-height: $px20;
+
+$pagination-color: $link-color;
+$pagination-bg: $white;
+$pagination-border-width: $px1;
+$pagination-border-color: $primary;
+
+$pagination-hover-color: $link-hover-color;
+$pagination-hover-bg: $secondary;
+$pagination-hover-border-color: $gray-800;
+
+$pagination-active-color: $link-hover-color;
+$pagination-active-bg: $secondary;
+$pagination-active-border-color: $pagination-active-bg;
+
+$pagination-disabled-color: $secondary;
+$pagination-disabled-bg: $white;
+$pagination-disabled-border-color: $secondary;
+
+// Tables
+$table-cell-padding: $px12;
+$table-cell-padding-sm: $px6;
+
+$table-bg: transparent;
+$table-accent-bg: $gray-400;
+$table-hover-bg: $gray-500;
+$table-active-bg: $table-hover-bg;
+
+$table-border-width: $px1;
+$table-border-color: $secondary;
+
+$table-head-bg: transparent;
+$table-head-color: $primary-theme-color;
+
+$tr-even-bg: $info;
+$tr-odd-bg: $gray-300;
+$tr-active-bg: $gray-600;
+$tr-focus-bg: $tr-active-bg;
+
+// flexboxgrid scss variable override.
+$gutter-width: .5rem;
+$flexboxgrid-max-width: 1345px;
