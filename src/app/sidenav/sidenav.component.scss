@@ -3,6 +3,7 @@
 .sidenav-container {
   height: 100%;
 }
+
 .example-form-field {
   width: 200px;
 }
@@ -15,25 +16,27 @@
   position: sticky;
   top: 0;
 }
-.mat-nav-list .mat-list-item{
+
+.mat-nav-list .mat-list-item {
   margin-top: 10px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
-.sidenavelement{
-  padding-left: 20px
+
+.sidenavelement {
+  padding-left: 20px;
 }
-::ng-deep .highlightmenu{
+
+::ng-deep .highlightmenu {
   background: linear-gradient(60deg,#ab47bc,#512f6f);
-    
+
 }
-
-
 
 .example-fill-remaining-space {
   /* This fills the remaining space, by using flexbox. 
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -45,14 +48,23 @@
 }
 
 .mat-drawer-container {
-    overflow: visible;
+  overflow: visible;
 }
 
-.logo-img{
+.logo-img {
   height: 70px;
   width: 85px;
 }
 
-.sign-out{
+.sign-out {
   color: $primary-btn-color;
+}
+
+.side-menu-icon {
+  display: none !important;
+}
+@media screen and (max-width: 600px) {
+  .side-menu-icon {
+    display: block !important;
+  }
 }

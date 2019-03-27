@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -8,12 +8,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatTableModule} from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TablelistComponent } from './tablelist/tablelist.component';
 import { TypoComponent } from './typo/typo.component';
@@ -22,20 +22,19 @@ import { MapsComponent } from './maps/maps.component';
 import { NotificationComponent } from './notification/notification.component';
 import { AgmCoreModule } from '@agm/core';
 import { ChartModule } from 'angular-highcharts';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    DashboardComponent,    
+    DashboardComponent,
     UserprofileComponent, TablelistComponent, TypoComponent, IconsComponent, MapsComponent, NotificationComponent,
-    
   ],
   imports: [
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAP_API_KEY'
-    }),    
+    }),
     ChartModule,
     MatTableModule,
     MatSnackBarModule,
@@ -46,41 +45,41 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatMenuModule,
     LayoutModule,
     BrowserModule,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
     RouterModule,
-    
+
     RouterModule.forRoot([
-      { 
-        path:'',
-        component:DashboardComponent
-      }, 
       {
-        path:'user',
+        path: '',
+        component: DashboardComponent
+      },
+      {
+        path: 'user',
         component: UserprofileComponent
-      }, 
+      },
       {
-        path:'table',
+        path: 'table',
         component: TablelistComponent
-      }, 
+      },
       {
-        path:'typo',
+        path: 'typo',
         component: TypoComponent
-      }, 
+      },
       {
-        path:'icons',
+        path: 'icons',
         component: IconsComponent
-      }, 
+      },
       {
-        path:'maps',
+        path: 'maps',
         component: MapsComponent
-      }, 
+      },
       {
-        path:'notify',
+        path: 'notify',
         component: NotificationComponent
       }
     ]),
