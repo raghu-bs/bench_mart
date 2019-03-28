@@ -58,6 +58,7 @@
 
 .sign-out {
   color: $primary-btn-color;
+  margin-bottom: 0;
 }
 
 .side-menu-icon {
@@ -67,4 +68,25 @@
   .side-menu-icon {
     display: block !important;
   }
+
+  .mob-header {
+    background: $primary-theme-color !important;
+    color: white !important;
+  }
+
+  .mob-header {
+    color: white !important;
+  }
+
+  .sign-out {
+    display: none;
+  }
+
+  .user-id {
+    display: none;
+  }
+}
+
+.user-id {
+  margin-bottom: 0;
 }
