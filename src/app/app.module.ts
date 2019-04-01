@@ -23,6 +23,7 @@ import { NotificationComponent } from './notification/notification.component';
 import { AgmCoreModule } from '@agm/core';
 import { ChartModule } from 'angular-highcharts';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     MatListModule,
     RouterModule,
+    FlexLayoutModule,
 
     RouterModule.forRoot([
       {
