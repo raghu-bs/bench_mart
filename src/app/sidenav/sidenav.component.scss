@@ -1,9 +1,45 @@
-@import "../../assets/styles/scss/variables.scss";
+// mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+//     height: 100%;
+// }
+ 
+// mat-sidenav {
+//     width: 250px;
+// }
+
+// .navigation-items{
+//   list-style-type: none;
+//   padding: 0;
+//   margin: 0;
+// }
+ 
+// mat-toolbar{
+//   border-radius: 3px;
+// }
+
+// // @media(max-width: 959px){
+// //   mat-toolbar{
+// //       border-radius: 0px;
+// //   }
+// // }
+
+// .logo-img{
+//   height: 70px;
+//   width: 85px;
+// }
+
+// main {
+//   padding: 10px;
+// }
+
+// .close-nav {
+//   position: relative;
+//   left: 46%;
+// }
+
 
 .sidenav-container {
   height: 100%;
 }
-
 .example-form-field {
   width: 200px;
 }
@@ -16,27 +52,33 @@
   position: sticky;
   top: 0;
 }
-
-.mat-nav-list .mat-list-item {
+.mat-nav-list .mat-list-item{
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
-
-.sidenavelement {
-  padding-left: 20px;
+.sidenavelement{
+  padding-left: 20px
 }
-
-::ng-deep .highlightmenu {
+::ng-deep .highlightmenu{
   background: linear-gradient(60deg,#ab47bc,#512f6f);
-
+    
+}
+.active-link{
+  background: linear-gradient(60deg,#ab47bc,#512f6f);
+  color: white;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
 }
 
+.mat-list-option.mat-list-item-focus, .mat-list-option:hover, .mat-nav-list .mat-list-item.mat-list-item-focus, .mat-nav-list .mat-list-item:hover {
+  background: linear-gradient(60deg,#ab47bc,#512f6f);
+    color: white;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
 .example-fill-remaining-space {
   /* This fills the remaining space, by using flexbox. 
      Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
-
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -48,45 +90,5 @@
 }
 
 .mat-drawer-container {
-  overflow: visible;
-}
-
-.logo-img {
-  height: 70px;
-  width: 85px;
-}
-
-.sign-out {
-  color: $primary-btn-color;
-  margin-bottom: 0;
-}
-
-.side-menu-icon {
-  display: none !important;
-}
-@media screen and (max-width: 600px) {
-  .side-menu-icon {
-    display: block !important;
-  }
-
-  .mob-header {
-    background: $primary-theme-color !important;
-    color: white !important;
-  }
-
-  .mob-header {
-    color: white !important;
-  }
-
-  .sign-out {
-    display: none;
-  }
-
-  .user-id {
-    display: none;
-  }
-}
-
-.user-id {
-  margin-bottom: 0;
+    overflow: visible;
 }

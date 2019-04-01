@@ -4,6 +4,10 @@
 @import "../../../m-modified.css";
 @import "../scss/variables.scss";
 
+.mat-drawer-backdrop.mat-drawer-shown {
+  visibility: hidden !important;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

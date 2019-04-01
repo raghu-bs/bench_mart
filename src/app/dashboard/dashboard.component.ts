@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'angular-highcharts';
-
+import { chart } from 'highcharts';
+import * as Highcharts from 'highcharts';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,6 +13,7 @@ export class DashboardComponent implements OnInit {
   piechart1: Chart;
   piechart2: Chart;
   areachart: Chart;
+  progresschart: Chart;
   constructor() {
 
   }
@@ -114,6 +116,84 @@ export class DashboardComponent implements OnInit {
         data: [190.7, 171.5, 106.4, 110.0, 110.0, 176.0, 135.6, 80.5, 216.4, 194.1, 146.6, 64.4],
         type: undefined,
         fillOpacity: 0.1
+      }]
+    });
+
+    this.progresschart = new Chart({
+      title: {
+        text: 'Highcharts Progress Bar',
+        align: 'left',
+        margin: 0,
+      },
+      chart: {
+        type: 'bar',
+        height: 70,
+      },
+      credits: {
+        enabled: false
+      },
+      tooltip: {
+        enabled: false
+      },
+      legend: {
+        enabled: false
+      },
+      navigation: {
+        buttonOptions: {
+          enabled: false
+        }
+      },
+      xAxis: {
+        visible: false,
+      },
+      yAxis: {
+        visible: false,
+        min: 0,
+        max: 100,
+      },
+      series: [{
+        data: [100],
+        grouping: false,
+        animation: false,
+        enableMouseTracking: false,
+        showInLegend: false,
+        color: 'lightskyblue',
+        pointWidth: 25,
+        borderWidth: 0,
+
+        type: undefined,
+        // dataLabels: {
+        //   className: 'highlight',
+        //   format: '150 / 600',
+        //   enabled: true,
+        //   align: 'right',
+        //   borderRadius: '4px',
+        //   style: {
+        //     color: 'white',
+        //     textOutline: undefined,
+        //   }
+        // }
+      }, {
+        enableMouseTracking: false,
+        data: [25],
+        color: 'navy',
+        borderWidth: 0,
+        pointWidth: 25,
+        animation: {
+          duration: 250,
+        },
+        type: undefined,
+        dataLabels: {
+          enabled: true,
+          inside: true,
+          align: 'left',
+          format: '{point.y}%',
+          style: {
+            color: 'white',
+            textOutline: undefined,
+          }
+        }
+
       }]
     });
   }
