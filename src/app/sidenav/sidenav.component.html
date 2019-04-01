@@ -1,37 +1,40 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" style="position: fixed" fixedInViewport="true"
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
-    <mat-toolbar class="white"><img class="logo-img" src="assets/images/bridge-mart-logo.png" width="80%"
-        style="margin:auto"></mat-toolbar>
+<mat-sidenav-container class="">
+  <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'push' : 'side'">
+    <mat-toolbar class="white">
+      <img class="logo-img" src="assets/images/bridge-mart-logo.png" width="50%" style="margin:auto">
+      <button *ngIf="small" class="close-nav" aria-label="Close icon" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav close icon">close</mat-icon>
+      </button>
+    </mat-toolbar>
     <mat-nav-list>
-      <a class="sidenavelement" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/"
-        mat-list-item href="#">
+      <a class="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/" mat-list-item
+        href="#">
         <mat-icon>dashboard</mat-icon> &nbsp; Dashboard
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/user" mat-list-item href="#">
-        <mat-icon>person</mat-icon> &nbsp; Organisation List
+      <a class="" routerLinkActive="active-link" routerLink="/user" mat-list-item href="#">
+        <mat-icon>person</mat-icon> &nbsp; User Profile
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/table" mat-list-item href="#">
-        <mat-icon>table_chart</mat-icon> &nbsp; Orders
+      <a class="" routerLinkActive="active-link" routerLink="/table" mat-list-item href="#">
+        <mat-icon>table_chart</mat-icon> &nbsp; Table List
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/typo" mat-list-item href="#">
-        <mat-icon>text_fields</mat-icon> &nbsp; Codes
+      <a class="" routerLinkActive="active-link" routerLink="/typo" mat-list-item href="#">
+        <mat-icon>text_fields</mat-icon> &nbsp; Typography
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/icons" mat-list-item href="#">
-        <mat-icon>insert_emoticon</mat-icon> &nbsp; Organisations
+      <a class="" routerLinkActive="active-link" routerLink="/icons" mat-list-item href="#">
+        <mat-icon>insert_emoticon</mat-icon> &nbsp; Icons
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/maps" mat-list-item href="#">
-        <mat-icon>map</mat-icon> &nbsp; Reporting
+      <a class="" routerLinkActive="active-link" routerLink="/maps" mat-list-item href="#">
+        <mat-icon>map</mat-icon> &nbsp; Maps
       </a>
-      <a class="sidenavelement" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
-        <mat-icon>notification_important</mat-icon> &nbsp; Admin
+      <a class="" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
+        <mat-icon>notification_important</mat-icon> &nbsp; Notifications
       </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="grey lighten-2 mob-header" style="min-height:90px">
-      <button type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button
-        (click)="drawer.toggle()">
+      <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <h1 class="mob-header"> Dashboard</h1>
@@ -44,6 +47,24 @@
       &nbsp; &nbsp;
       <p class="sign-out mob-header">Sign Out</p>
     </mat-toolbar>
-    <!-- Add Content Here -->
+    <!-- <mat-toolbar class="grey lighten-2">
+      <button *ngIf="small" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <div>Material Dashboard</div>
+      <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs fxHide.sm>
+        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+          <li>
+            <a routerLink="/owner">mailer@mail.com</a>
+          </li>
+          <li>
+            <a routerLink="/account">Signout</a>
+          </li>
+        </ul>
+      </div>
+    </mat-toolbar> -->
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

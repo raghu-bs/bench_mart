@@ -25,9 +25,11 @@
             "styles": [
               "src/assets/styles/scss/styles.scss",
               "src/assets/styles/scss/variables.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/scss/bootstrap-grid.scss"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"]
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -76,9 +78,11 @@
             "styles": [
               "src/assets/styles/scss/styles.scss",
               "src/assets/styles/scss/variables.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.css"
+              "node_modules/bootstrap/scss/bootstrap-grid.scss"
             ],
-            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.js"],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
