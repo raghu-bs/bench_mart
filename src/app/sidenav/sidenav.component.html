@@ -33,12 +33,24 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="grey lighten-2">
-      <!-- <div fxHide.gt-xs> -->
+    <mat-toolbar class="grey lighten-2 mob-header" style="min-height:90px">
+      <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <h1 class="mob-header"> Dashboard</h1>
+      <span class="example-fill-remaining-space"></span>
+      <span class="example-fill-remaining-space"></span>
+      <p class="hide-on-med-and-down" style="margin-top:-10px">
+      </p>
+      <span class="example-fill-remaining-space"></span>
+      <p class="user-id mob-header">charles@bridgemart.com</p>
+      &nbsp; &nbsp;
+      <p class="sign-out mob-header">Sign Out</p>
+    </mat-toolbar>
+    <!-- <mat-toolbar class="grey lighten-2">
       <button *ngIf="small" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <!-- </div> -->
       <div>Material Dashboard</div>
       <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs fxHide.sm>
         <ul fxLayout fxLayoutGap="15px" class="navigation-items">
@@ -50,9 +62,7 @@
           </li>
         </ul>
       </div>
-
-
-    </mat-toolbar>
+    </mat-toolbar> -->
     <main>
       <router-outlet></router-outlet>
     </main>
