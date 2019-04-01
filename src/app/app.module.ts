@@ -17,12 +17,25 @@ import { MatTableModule } from '@angular/material/table';
 import { AgmCoreModule } from '@agm/core';
 import { ChartModule } from 'angular-highcharts';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { OrganisationListComponent } from './organisation-list/organisation-list.component';
+import { OrdersComponent } from './orders/orders.component';
+import { CodesComponent } from './codes/codes.component';
+import { OrganisationsComponent } from './organisations/organisations.component';
+import { ReportingComponent } from './reporting/reporting.component';
+import { AdminComponent } from './admin/admin.component';
+import { dashboardRoutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     DashboardComponent,
+    OrganisationListComponent,
+    OrdersComponent,
+    CodesComponent,
+    OrganisationsComponent,
+    ReportingComponent,
+    AdminComponent,
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -45,37 +58,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatIconModule,
     MatListModule,
     RouterModule,
-
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      // {
-      //   path: 'user',
-      //   component: UserprofileComponent
-      // },
-      // {
-      //   path: 'table',
-      //   component: TablelistComponent
-      // },
-      // {
-      //   path: 'typo',
-      //   component: TypoComponent
-      // },
-      // {
-      //   path: 'icons',
-      //   component: IconsComponent
-      // },
-      // {
-      //   path: 'maps',
-      //   component: MapsComponent
-      // },
-      // {
-      //   path: 'notify',
-      //   component: NotificationComponent
-      // }
-    ]),
+    RouterModule.forRoot(dashboardRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
