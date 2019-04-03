@@ -10,6 +10,7 @@ import { OrganisationsComponent } from './organisations/organisations.component'
 import { OrdersComponent } from './orders/orders.component';
 import { CodesComponent } from './codes/codes.component';
 import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [],
@@ -21,7 +22,9 @@ import { AdminComponent } from './admin/admin.component';
 export class AppRoutingModule { }
 
 export const dashboardRoutes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
+  // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent},
   { path: 'dashboard', component: DashboardComponent },
   { path: 'organisation-list', component: OrganisationListComponent },
   { path: 'orders', component: OrdersComponent },

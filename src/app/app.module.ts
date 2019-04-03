@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatProgressSpinnerModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatMenuModule } from '@angular/material/menu';
@@ -24,6 +24,11 @@ import { OrganisationsComponent } from './organisations/organisations.component'
 import { ReportingComponent } from './reporting/reporting.component';
 import { AdminComponent } from './admin/admin.component';
 import { dashboardRoutes } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,7 @@ import { dashboardRoutes } from './app-routing.module';
     OrganisationsComponent,
     ReportingComponent,
     AdminComponent,
+    LoginComponent,
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -57,10 +63,13 @@ import { dashboardRoutes } from './app-routing.module';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    FormsModule,
+    //RouterModule,
     RouterModule.forRoot(dashboardRoutes),
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

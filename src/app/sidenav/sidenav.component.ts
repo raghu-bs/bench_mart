@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -16,7 +17,7 @@ export class SidenavComponent {
     );
   small = false;
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
     this.breakpointObserver
       .observe([Breakpoints.Small, Breakpoints.HandsetPortrait])
       .subscribe((state: BreakpointState) => {
@@ -29,6 +30,10 @@ export class SidenavComponent {
           this.small = false
         }
       });
+  }
+
+  signOut() {
+    this.router.navigate(['login']);
   }
 
 }
