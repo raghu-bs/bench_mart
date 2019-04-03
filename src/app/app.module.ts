@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -24,6 +23,10 @@ import { AgmCoreModule } from '@agm/core';
 import { ChartModule } from 'angular-highcharts';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from "@angular/flex-layout";
+
+import { CommonService } from './services/common.service';
+import { InterceptorService } from './services/interceptor.service';
+
 
 @NgModule({
   declarations: [
@@ -86,7 +89,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
       }
     ]),
   ],
-  providers: [],
+  providers: [CommonService, InterceptorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
