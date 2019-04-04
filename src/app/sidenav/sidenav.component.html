@@ -2,12 +2,14 @@
   <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'push' : 'side'">
     <mat-toolbar class="white">
-      <img class="logo-img" src="assets/images/bridge-mart-logo.png" width="50%" style="margin:auto">
+      <img class="logo-img" src="assets/images/bridge-mart-logo.png" width="50%">
       <button *ngIf="small" class="close-nav" aria-label="Close icon" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav close icon">close</mat-icon>
       </button>
     </mat-toolbar>
+    
     <mat-nav-list>
+      <div><p class="user-name-mob">charles@bridgemart.com</p></div>
       <a class="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/" mat-list-item
         href="#">
         <mat-icon>dashboard</mat-icon> &nbsp; Dashboard
@@ -29,6 +31,9 @@
       </a>
       <a class="" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
         <mat-icon>notification_important</mat-icon> &nbsp; Notifications
+      </a>
+      <a class="showLogout" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
+        <mat-icon>notification_important</mat-icon> &nbsp; Signout
       </a>
     </mat-nav-list>
   </mat-sidenav>

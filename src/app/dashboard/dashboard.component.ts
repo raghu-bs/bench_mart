@@ -23,89 +23,89 @@ export class DashboardComponent implements OnInit {
   }
 
   donutPieChart() {
+//     this.piechart1 = new Chart({
+//       chart:{
+//         type:'pie',
+//         height: 300,
+//         width: 400
+//           },
+//     credits:{enabled: false},
+//     colors:[
+//         '#5485BC', '#AA8C30', '#5C9384', '#981A37', '#FCB319',     '#86A033', '#614931', '#00526F', '#594266', '#cb6828', '#aaaaab', '#a89375'
+//         ],
+//     title:{text: null},
+// plotOptions: {
+//         pie: {
+//             allowPointSelect: true,
+//             cursor: 'pointer',
+//             showInLegend: true,
+//             dataLabels: {
+//                 enabled: false,                        
+//                 formatter: function() {
+//                     return  '%';
+//                 }
+//             } 									
+//         }
+//     },
+//     legend: {
+//         enabled: true,
+//         layout: 'vertical',
+//         align: 'right',
+//         width: 200,
+//         verticalAlign: 'middle',
+//         useHTML: true,
+//         labelFormatter: function() {
+//             return '<div style="text-align: left; width:130px;float:left;">' + this.name + '</div><div style="width:40px; float:left;text-align:right;">' + this.y + '%</div>';
+// }
+//     },
+// series: [{
+// type: 'pie',
+//         dataLabels: {},
+//         size: '60%',
+//         innerSize: '30%',
+// data: [
+//   ['Domestic Equity', 38.5],
+//   ['International Equity', 26.85],
+//   ['Other', 15.70],
+//   ['Cash and Equivalents', 10.48],
+//   ['Fixed Income', 8.48]
+// ]
+// }]
+// });
+    // });
     this.piechart1 = new Chart({
-      chart:{
-        type:'pie',
-        height: 300,
-        width: 400
-          },
-    credits:{enabled: false},
-    colors:[
-        '#5485BC', '#AA8C30', '#5C9384', '#981A37', '#FCB319',     '#86A033', '#614931', '#00526F', '#594266', '#cb6828', '#aaaaab', '#a89375'
-        ],
-    title:{text: null},
-plotOptions: {
-        pie: {
-            allowPointSelect: true,
-            cursor: 'pointer',
-            showInLegend: true,
-            dataLabels: {
-                enabled: false,                        
-                formatter: function() {
-                    return  '%';
-                }
-            } 									
+      chart: {
+        type: 'pie'
+      },
+      title: {
+        text: 'Load'
+      },
+      yAxis: {
+        title: {
+          text: 'Total percent market share'
         }
-    },
-    legend: {
-        enabled: true,
-        layout: 'vertical',
-        align: 'right',
-        width: 200,
-        verticalAlign: 'middle',
-        useHTML: true,
-        labelFormatter: function() {
-            return '<div style="text-align: left; width:130px;float:left;">' + this.name + '</div><div style="width:40px; float:left;text-align:right;">' + this.y + '%</div>';
-}
-    },
-series: [{
-type: 'pie',
-        dataLabels: {},
+      },
+      plotOptions: {
+        pie: {
+          shadow: false
+        }
+      },
+      tooltip: {
+        formatter: function () {
+          return '<b>' + this.point.name + '</b>: ' + this.y + ' %';
+        }
+      },
+      series: [{
+        name: 'Browsers',
+        data: [['Firefox', 6], ['MSIE', 4], ['Chrome', 7]],
         size: '60%',
-        innerSize: '30%',
-data: [
-  ['Domestic Equity', 38.5],
-  ['International Equity', 26.85],
-  ['Other', 15.70],
-  ['Cash and Equivalents', 10.48],
-  ['Fixed Income', 8.48]
-]
-}]
-});
-    // });
-    // this.piechart1 = new Chart({
-    //   chart: {
-    //     type: 'pie'
-    //   },
-    //   title: {
-    //     text: 'Load'
-    //   },
-    //   yAxis: {
-    //     title: {
-    //       text: 'Total percent market share'
-    //     }
-    //   },
-    //   plotOptions: {
-    //     pie: {
-    //       shadow: false
-    //     }
-    //   },
-    //   tooltip: {
-    //     formatter: function () {
-    //       return '<b>' + this.point.name + '</b>: ' + this.y + ' %';
-    //     }
-    //   },
-    //   series: [{
-    //     name: 'Browsers',
-    //     data: [['Firefox', 6], ['MSIE', 4], ['Chrome', 7]],
-    //     size: '60%',
-    //     innerSize: '20%',
-    //     showInLegend: true,
-    //     dataLabels: {
-    //       enabled: true,
-    //     }, type: undefined
-    //   }]
-    // });
+        innerSize: '20%',
+        showInLegend: true,
+        dataLabels: {
+          enabled: true,
+        }, type: undefined
+      }]
+    });
 
     this.piechart2 = new Chart({
       chart: {
