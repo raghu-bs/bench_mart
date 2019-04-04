@@ -24,10 +24,6 @@ import { ChartModule } from 'angular-highcharts';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
-import { CommonService } from './services/common.service';
-import { InterceptorService } from './services/interceptor.service';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +85,7 @@ import { InterceptorService } from './services/interceptor.service';
       }
     ]),
   ],
-  providers: [CommonService, InterceptorService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
