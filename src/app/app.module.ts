@@ -28,7 +28,8 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
+// import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
+import { LoginService } from './services/login.service';
 
 @NgModule({
   declarations: [
@@ -66,10 +67,12 @@ import { HttpConfigInterceptor} from './interceptor/httpconfig.interceptor';
     MatCardModule,
     MatProgressSpinnerModule,
     FormsModule,
-    //RouterModule,
+    HttpClientModule,
     RouterModule.forRoot(dashboardRoutes),
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true}],
+  providers: [ LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// {provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true},

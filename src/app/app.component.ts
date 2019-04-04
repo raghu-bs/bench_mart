@@ -6,6 +6,6 @@ import { Router } from '@angular/router';
   // styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'matdash';
+  title = 'Bridge Mart Dashboard';
   constructor(public routes: Router){}
 }

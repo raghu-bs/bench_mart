@@ -1,19 +1,27 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-// import 'rxjs/operator/map';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+import 'rxjs/add/operator/map';
+import { Subject } from 'rxjs';
 
 @Injectable()
 export class LoginService {
 
-    constructor(private http: HttpClient) { }
 
-    login(data) {
-        // data = { email: 'admin', password: 'admin' };
-        return this.http.get('http://localhost:8080/api/contacts');
-    }
+  constructor(private http: HttpClient) { }
 
-    getCustomerDetails() {
-        return this.http.get('http://localhost:3070/customers/details');
-    }
+  login(data) {
+    return this.http.post('http://localhost:8080/api/login', data)
+    .map(resdata => {
+      return resdata;
+    }, error => {
+      return null;
+    });
+  }
+
+  getCustomerDetails() {
+    return this.http.get('http://localhost:3070/customers/details');
+  }
 
 }
