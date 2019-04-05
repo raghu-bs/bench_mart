@@ -22,30 +22,40 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .example-fill-remaining-space {
   flex: 1 1 auto;
 }
-.active {
-  background: linear-gradient(60deg,#ab47bc,#512f6f);
-  color: white;
-  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+
+// .active {
+//   background: linear-gradient(60deg,#ab47bc,#512f6f);
+//   color: white;
+//   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+// }
+
+.dashboard {
+  color: $primary-theme-color !important;
 }
 
 .sign-out {
   color: $primary-btn-color;
   margin-bottom: 0;
 }
+
+.menu-bar-section {
+  min-height: 90px;
+}
 @media screen and (max-width: 600px) {
   .side-menu-icon {
     display: block !important;
   }
 
-  .mob-header {
-    background: $primary-theme-color !important;
+  .dashboard {
     color: white !important;
   }
 
   .mob-header {
+    background: $primary-theme-color !important;
     color: white !important;
   }
 

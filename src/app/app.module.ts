@@ -35,7 +35,7 @@ import { dashboardRoutes } from './app-routing.module';
     CodesComponent,
     OrganisationsComponent,
     ReportingComponent,
-    AdminComponent,
+    AdminComponent
   ],
   imports: [
     AgmCoreModule.forRoot({
