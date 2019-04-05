@@ -1,55 +1,62 @@
-<section>
-  <mat-sidenav-container class="">
-    <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" fixedInViewport="true"
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'push' : 'side'">
-      <mat-toolbar class="white">
-        <img class="logo-img" src="assets/images/bridge-mart-logo.png" width="50%" style="margin:auto">
-        <button *ngIf="small" class="close-nav" aria-label="Close icon" mat-icon-button (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav close icon">close</mat-icon>
-        </button>
-      </mat-toolbar>
-      <mat-nav-list>
-        <a class="" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }" routerLink="/dashboard"
-          mat-list-item href="#">
-          <mat-icon>person</mat-icon> &nbsp; Dashboard
-        </a>
-        <a class="" routerLinkActive="active-link" routerLink="/organisation-list" mat-list-item href="#">
-          <mat-icon>person</mat-icon> &nbsp; Organisation List
-        </a>
-        <a class="" routerLinkActive="active-link" routerLink="/orders" mat-list-item href="#">
-          <mat-icon>table_chart</mat-icon> &nbsp; Orders
-        </a>
-        <a class="" routerLinkActive="active-link" routerLink="/codes" mat-list-item href="#">
-          <mat-icon>text_fields</mat-icon> &nbsp; Codes
-        </a>
-        <a class="" routerLinkActive="active-link" routerLink="/organisations" mat-list-item href="#">
-          <mat-icon>insert_emoticon</mat-icon> &nbsp; Organisations
-        </a>
-        <a class="" routerLinkActive="active-link" routerLink="/reporting" mat-list-item href="#">
-          <mat-icon>map</mat-icon> &nbsp; Reporting
-        </a>
-        <a class="" routerLinkActive="active" routerLink="/admin" mat-list-item href="#">
-          <mat-icon>notification_important</mat-icon> &nbsp; Admin
-        </a>
-      </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar class="grey lighten-2 mob-header menu-bar-section">
-        <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <h1 class="dashboard"> Dashboard</h1>
-        <span class="example-fill-remaining-space"></span>
-        <span class="example-fill-remaining-space"></span>
-        <span class="example-fill-remaining-space"></span>
-        <p class="user-id mob-header">charles@bridgemart.com</p>
-        &nbsp; &nbsp;
-        <p class="sign-out mob-header">Sign Out</p>
-      </mat-toolbar>
-      <main>
-        <router-outlet></router-outlet>
-      </main>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-</section>
+<mat-sidenav-container class="">
+  <mat-sidenav #drawer [opened]="!small" class="sidenav mat-elevation-z8" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'push' : 'side'">
+    <mat-toolbar class="white">
+      <img class="logo-img" src="assets/images/bridge-mart-logo.png" width="50%">
+      <button *ngIf="small" class="close-nav" aria-label="Close icon" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav close icon">close</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-nav-list>
+      <div>
+        <p class="user-name-mob">charles@bridgemart.com</p>
+      </div>
+      <a class="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/" mat-list-item
+        href="#">
+        <mat-icon>person</mat-icon> &nbsp; Dashboard
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/organisation-list" mat-list-item href="#">
+        <mat-icon>person</mat-icon> &nbsp; Organisation List
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/orders" mat-list-item href="#">
+        <mat-icon>table_chart</mat-icon> &nbsp; Orders
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/codes" mat-list-item href="#">
+        <mat-icon>text_fields</mat-icon> &nbsp; Codes
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/organisations" mat-list-item href="#">
+        <mat-icon>insert_emoticon</mat-icon> &nbsp; Organisations
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/reporting" mat-list-item href="#">
+        <mat-icon>map</mat-icon> &nbsp; Reporting
+      </a>
+      <a class="" routerLinkActive="active" routerLink="/admin" mat-list-item href="#">
+        <mat-icon>notification_important</mat-icon> &nbsp; Admin
+      </a>
+      <a class="showLogout" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
+        <mat-icon>notification_important</mat-icon> &nbsp; Signout
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="grey lighten-2 mob-header" style="min-height:90px">
+      <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <h1 class="mob-header"> Dashboard</h1>
+      <span class="example-fill-remaining-space"></span>
+      <span class="example-fill-remaining-space"></span>
+      <p class="hide-on-med-and-down" style="margin-top:-10px">
+      </p>
+      <span class="example-fill-remaining-space"></span>
+      <p class="user-id mob-header">charles@bridgemart.com</p>
+      &nbsp; &nbsp;
+      <p class="sign-out mob-header">Sign Out</p>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

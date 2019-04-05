@@ -53,7 +53,7 @@ export class DashboardComponent implements OnInit {
         innerSize: '20%',
         showInLegend: true,
         dataLabels: {
-          enabled: false
+          enabled: true,
         }, type: undefined
       }]
     });
@@ -85,7 +85,7 @@ export class DashboardComponent implements OnInit {
         name: 'Browsers',
         data: [['Firefox', 6], ['MSIE', 4], ['Chrome', 7]],
         size: '60%',
-        innerSize: '20%',
+        innerSize: '30%',
         showInLegend: true,
         dataLabels: {
           enabled: false
@@ -102,11 +102,7 @@ export class DashboardComponent implements OnInit {
         categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
       },
 
-      plotOptions: {
-        // series: {
-        //   fillOpacity: 0.1
-        // }
-      },
+      plotOptions: {},
 
       series: [{
         data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 200.5, 236.4, 194.1, 95.6, 54.4],
@@ -119,7 +115,7 @@ export class DashboardComponent implements OnInit {
         fillOpacity: 0.1
       }]
     });
-    
+
     this.areachart1 = new Chart({
       chart: {
         type: 'area'
@@ -177,6 +173,14 @@ export class DashboardComponent implements OnInit {
         min: 0,
         max: 100,
       },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            enabled: true,
+            inside: true
+          }
+        }
+      },
       series: [{
         data: [100],
         grouping: false,
@@ -186,8 +190,11 @@ export class DashboardComponent implements OnInit {
         color: 'lightskyblue',
         pointWidth: 25,
         borderWidth: 0,
-
         type: undefined,
+        // borderRadiusTopLeft: '4px',
+        // borderRadiusTopRight: '4px',
+        // borderRadiusBottomLeft: '4px',
+        // borderRadiusBottomRight: '4px',
         // dataLabels: {
         //   className: 'highlight',
         //   format: '150 / 600',
@@ -219,7 +226,6 @@ export class DashboardComponent implements OnInit {
             textOutline: undefined,
           }
         }
-
       }]
     });
   }

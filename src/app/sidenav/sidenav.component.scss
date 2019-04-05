@@ -3,6 +3,11 @@
 .logo-img {
   height: 70px;
   width: 85px;
+  margin: auto;
+}
+
+.user-name-mob {
+  display: none !important;
 }
 
 .sidenav-container {
@@ -45,6 +50,10 @@
 .menu-bar-section {
   min-height: 90px;
 }
+
+.showLogout {
+  display: none !important;
+}
 @media screen and (max-width: 600px) {
   .side-menu-icon {
     display: block !important;
@@ -65,6 +74,16 @@
 
   .user-id {
     display: none;
+  }
+
+  .showLogout {
+    display: block !important;
+  }
+
+  .user-name-mob {
+    display: block !important;
+    overflow-wrap: break-word;
+    text-align: center;
   }
 }
 
