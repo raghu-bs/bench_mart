@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "../../../m-modified.css";
+@import "./m-modified.scss";
 @import "../scss/variables.scss";
 
 .mat-drawer-backdrop.mat-drawer-shown {
@@ -60,7 +60,7 @@
   background: #7d7d7d;
 }
 
-.active-link {
+.active {
   background: $primary-theme-color !important;
   color: $white !important;
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
@@ -73,6 +73,12 @@
   background: $primary-theme-color !important;
   color: $white !important;
   box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+}
+
+.mat-list .mat-list-item,
+.mat-nav-list .mat-list-item,
+.mat-selection-list .mat-list-item {
+  color: $primary-theme-color !important;
 }
 
 .widget-header {

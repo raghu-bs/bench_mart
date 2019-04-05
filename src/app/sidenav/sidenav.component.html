@@ -12,25 +12,25 @@
       <div><p class="user-name-mob">charles@bridgemart.com</p></div>
       <a class="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/" mat-list-item
         href="#">
-        <mat-icon>dashboard</mat-icon> &nbsp; Dashboard
+        <mat-icon>person</mat-icon> &nbsp; Dashboard
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/user" mat-list-item href="#">
-        <mat-icon>person</mat-icon> &nbsp; User Profile
+      <a class="" routerLinkActive="active" routerLink="/organisation-list" mat-list-item href="#">
+        <mat-icon>person</mat-icon> &nbsp; Organisation List
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/table" mat-list-item href="#">
-        <mat-icon>table_chart</mat-icon> &nbsp; Table List
+      <a class="" routerLinkActive="active" routerLink="/orders" mat-list-item href="#">
+        <mat-icon>table_chart</mat-icon> &nbsp; Orders
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/typo" mat-list-item href="#">
-        <mat-icon>text_fields</mat-icon> &nbsp; Typography
+      <a class="" routerLinkActive="active" routerLink="/codes" mat-list-item href="#">
+        <mat-icon>text_fields</mat-icon> &nbsp; Codes
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/icons" mat-list-item href="#">
-        <mat-icon>insert_emoticon</mat-icon> &nbsp; Icons
+      <a class="" routerLinkActive="active" routerLink="/organisations" mat-list-item href="#">
+        <mat-icon>insert_emoticon</mat-icon> &nbsp; Organisations
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/maps" mat-list-item href="#">
-        <mat-icon>map</mat-icon> &nbsp; Maps
+      <a class="" routerLinkActive="active" routerLink="/reporting" mat-list-item href="#">
+        <mat-icon>map</mat-icon> &nbsp; Reporting
       </a>
-      <a class="" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
-        <mat-icon>notification_important</mat-icon> &nbsp; Notifications
+      <a class="" routerLinkActive="active" routerLink="/admin" mat-list-item href="#">
+        <mat-icon>notification_important</mat-icon> &nbsp; Admin
       </a>
       <a class="showLogout" routerLinkActive="active-link" routerLink="/notify" mat-list-item href="#">
         <mat-icon>notification_important</mat-icon> &nbsp; Signout
@@ -39,7 +39,8 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="grey lighten-2 mob-header" style="min-height:90px">
-      <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button (click)="drawer.toggle()">
+      <button *ngIf="small" type="button" aria-label="Toggle sidenav" class="side-menu-icon" mat-icon-button
+        (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <h1 class="mob-header"> Dashboard</h1>

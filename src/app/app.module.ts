@@ -13,23 +13,28 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
-import { UserprofileComponent } from './userprofile/userprofile.component';
-import { TablelistComponent } from './tablelist/tablelist.component';
-import { TypoComponent } from './typo/typo.component';
-import { IconsComponent } from './icons/icons.component';
-import { MapsComponent } from './maps/maps.component';
-import { NotificationComponent } from './notification/notification.component';
 import { AgmCoreModule } from '@agm/core';
 import { ChartModule } from 'angular-highcharts';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { OrganisationListComponent } from './organisation-list/organisation-list.component';
+import { OrdersComponent } from './orders/orders.component';
+import { CodesComponent } from './codes/codes.component';
+import { OrganisationsComponent } from './organisations/organisations.component';
+import { ReportingComponent } from './reporting/reporting.component';
+import { AdminComponent } from './admin/admin.component';
+import { dashboardRoutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     DashboardComponent,
-    UserprofileComponent, TablelistComponent, TypoComponent, IconsComponent, MapsComponent, NotificationComponent,
+    OrganisationListComponent,
+    OrdersComponent,
+    CodesComponent,
+    OrganisationsComponent,
+    ReportingComponent,
+    AdminComponent,
   ],
   imports: [
     AgmCoreModule.forRoot({
@@ -52,38 +57,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatIconModule,
     MatListModule,
     RouterModule,
-    FlexLayoutModule,
-
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: DashboardComponent
-      },
-      {
-        path: 'user',
-        component: UserprofileComponent
-      },
-      {
-        path: 'table',
-        component: TablelistComponent
-      },
-      {
-        path: 'typo',
-        component: TypoComponent
-      },
-      {
-        path: 'icons',
-        component: IconsComponent
-      },
-      {
-        path: 'maps',
-        component: MapsComponent
-      },
-      {
-        path: 'notify',
-        component: NotificationComponent
-      }
-    ]),
+    RouterModule.forRoot(dashboardRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
