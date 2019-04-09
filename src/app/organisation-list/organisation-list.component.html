@@ -1,4 +1,10 @@
-<div class="">
+
+
+<div *ngIf="!small">
+
+<div class="heading-web">
+  <h1 class="title-color">Organizational List</h1>
+</div>
 
 <div class="d-flex flex-row justify-content-end grey lighten-2">
   <mat-form-field appearance="outline">
@@ -10,17 +16,6 @@
   </div>
 </div>
 
-
-<!-- <div class="row-bg mt-3 mb-3 p-2 mr-3 ml-3">
-   <div class="d-flex">
-     <span>Apple</span>
-     <span>1200 members</span>
-     <span>
-       <button>Active</button>
-       Account Status
-     </span>
-    </div>
-</div> -->
 <mat-card class="">
   <mat-card-content class="d-flex">
     <div class="p-3 mx-5">Apple</div>
@@ -49,4 +44,31 @@
     </mat-card-content>
   </mat-card>
 
+</div>
+
+<div *ngIf="small">
+    <div class="heading-web d-flex justify-content-around">
+      <h1 class="title-color">Organizational List</h1>
+      <mat-icon class="org-icon-mob">search</mat-icon>
+      <mat-icon class="org-icon-mob">filter</mat-icon>
+    </div>
+    <div class="org-content">
+      <mat-card>
+        <mat-card-content>
+          <mat-card-title>Apple</mat-card-title>
+          <div class="d-flex justify-content-around org-inner-content">
+            <div class="mx-3">1200 <br/> members</div>
+            <div class="mx-3">
+                <button mat-raised-button color="primary-btn-color">Active</button>
+                <br/>
+              ACCOUNT STATUS
+              </div>
+          </div>
+          <div class="d-flex justify-content-around org-inner-content">
+            <div class="my-3">6/1/2019 <br/> START DATE</div>
+            <div class="my-3">$12000<br/>YTD LOAD</div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
 </div>

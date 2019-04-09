@@ -125,3 +125,31 @@ h5 {
   font-size: 16px !important;
   color: $primary-gray-heading;
 }
+
+.heading-web {
+  margin-top: -94px;
+  padding-left: 29px;
+}
+
+@media screen and (max-width: 600px) {
+  .heading-web {
+    margin-top: -98px;
+    margin-left: 40px;
+  }
+  .title-color {
+    color: white !important;
+  }
+
+  .org-icon-mob {
+    margin-top: 40px;
+  }
+
+  .org-content {
+    padding: 20px;
+  }
+
+  .org-inner-content {
+    text-align: center;
+  }
+
+}
